@@ -36,7 +36,7 @@ public class GreetingTest {
 		assertEquals("Good night, World!", greeting.greetingFinder(data));
 	}
 	
-	private static final Locale dLocale = new Locale.Builder().setLanguage("ru").setScript("Ru").build();
+	private static final Locale dLocale = new Locale("ru", "RU");;
 	
 	@Test
 	public void greetingFinder_day_ru() throws Exception {
@@ -62,7 +62,7 @@ public class GreetingTest {
 	
 	@Test (expected=IllegalStateException.class)
 	public void greetingFinder_error_hour() throws Exception {
-		data.setLocale(Locale.ROOT);
+		data.setLocale(dLocale);
 		data.setHour(24);
 		assertEquals("Добрый вечер, Мир!", greeting.greetingFinder(data));
 	}
