@@ -1,20 +1,16 @@
 package ua.alex.project.greeting;
 
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
+import java.time.LocalDateTime;
 import java.util.Locale;
 
-public class UserLocale {
+public class UserDate {
 	
 	private Locale locale;
 	private int hour;
 	
-	public UserLocale(){
+	public UserDate(){
 		this.locale = Locale.getDefault();
-		Calendar calendar = GregorianCalendar.getInstance();
-		calendar.setTime(new Date());
-		this.hour = calendar.get(Calendar.HOUR);
+		this.hour = LocalDateTime.now().getHour();
 	}
 	
 	public Locale getLocale() {
