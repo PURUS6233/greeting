@@ -1,11 +1,12 @@
 package ua.alex.project.greeting;
 
+import com.google.common.base.Preconditions;
+
 public class Greeting {
 	
 	public String greetingBasedOnHourFinder(UserData data) throws Exception{
-		if(!data.validate()){
-			throw new Exception("Error occured during loading time and locale!");
-		}
+		Preconditions.checkState(data.validate(),
+				"Error occured during loading time and locale!");
 		if (data.getHour() > 6 & data.getHour() < 9) {
 			return "Good morning, World!";
 		} else if (data.getHour() > 8 & data.getHour() < 19) {

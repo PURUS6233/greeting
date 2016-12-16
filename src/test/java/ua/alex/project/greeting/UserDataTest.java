@@ -27,17 +27,10 @@ public class UserDataTest {
 		assertTrue(data.validate());
 	}
 	
-	@Test
-	public void test_validate_false_hour() throws Exception {
+	@Test (expected = IllegalStateException.class)
+	public void test_validation_error() throws Exception {
 		UserData data = new UserData();
 		data.setHour(24);
-		assertFalse(data.validate());
-	}
-	
-	@Test
-	public void test_validate_false_locale() throws Exception {
-		UserData data = new UserData();
-		data.setLocale(null);
 		assertFalse(data.validate());
 	}
 

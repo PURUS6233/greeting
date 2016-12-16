@@ -3,6 +3,8 @@ package ua.alex.project.greeting;
 import java.time.LocalDateTime;
 import java.util.Locale;
 
+import com.google.common.base.Preconditions;
+
 public class UserData {
 	
 	private Locale locale;
@@ -27,9 +29,10 @@ public class UserData {
 	}
 	
 	public boolean validate(){
-		if((locale == null) || (hour > 23 || hour < 0)){
-			return false;
-		}
+		Preconditions.checkState(!(locale == null),
+				"The locale can not be null!");
+		Preconditions.checkState(!(hour > 23 || hour < 0),
+				"The customer hour must be in range from 0 to 23 hours!");
 		return true;
 	}
 	
