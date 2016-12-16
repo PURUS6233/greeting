@@ -24,13 +24,15 @@ public class Greeting {
 					data.getLocale());
 		} else if (data.getHour() > 8 & data.getHour() < 19) {
 			log.info("Loading message for day greeting!");
-			return "Good day, World!";
+			return context.getMessage("greeting.day", null,
+					data.getLocale());
 		} else if (data.getHour() > 18 & data.getHour() < 23) {
 			log.info("Loading message for evening greeting!");
-			return "Good evening, World!";
+			return context.getMessage("greeting.evening", null,
+					data.getLocale());
 		}
 		log.info("Loading message for night greeting!");
-		return "Good night, World!";
+		return context.getMessage("greeting.night", null, data.getLocale());
 	}
 	
 	public static void main(String[] args) throws Exception{

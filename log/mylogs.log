@@ -15,3 +15,9 @@
 16-12-2016 10:53:27 INFO  UserData:20 - Created UserData instance with locale:ru_RU and local time: 10!
 16-12-2016 10:53:27 INFO  Greeting:32 - Loading message for night greeting!
 16-12-2016 10:53:27 INFO  Greeting:22 - Loading message for morning greeting!
+16-12-2016 10:55:44 INFO  ClassPathXmlApplicationContext:456 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@39f790: startup date [Fri Dec 16 10:55:44 EET 2016]; root of context hierarchy
+16-12-2016 10:55:44 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [locale.xml]
+16-12-2016 10:55:44 INFO  DefaultListableBeanFactory:555 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1f3ddb1: defining beans [messageSource]; root of factory hierarchy
+16-12-2016 10:55:45 INFO  UserData:20 - Created UserData instance with locale:ru_RU and local time: 10!
+16-12-2016 10:55:45 INFO  Greeting:34 - Loading message for night greeting!
+16-12-2016 10:55:45 INFO  Greeting:22 - Loading message for morning greeting!
