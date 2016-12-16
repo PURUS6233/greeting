@@ -2,3 +2,10 @@
 16-12-2016 10:32:16 INFO  Greeting:20 - Loading message for day greeting!
 16-12-2016 10:47:38 INFO  UserData:20 - Created UserData instance with locale:ru_RU and local time: 10!
 16-12-2016 10:47:38 INFO  Greeting:17 - Loading message for morning greeting!
+16-12-2016 10:49:46 INFO  UserData:20 - Created UserData instance with locale:ru_RU and local time: 10!
+16-12-2016 10:49:46 INFO  Greeting:26 - Loading message for night greeting!
+16-12-2016 10:49:46 INFO  Greeting:17 - Loading message for morning greeting!
+16-12-2016 10:49:46 INFO  Greeting:23 - Loading message for evening greeting!
+16-12-2016 10:49:46 INFO  Greeting:20 - Loading message for day greeting!
+16-12-2016 10:51:26 INFO  UserData:20 - Created UserData instance with locale:ru_RU and local time: 10!
+16-12-2016 10:51:26 INFO  Greeting:17 - Loading message for morning greeting!
