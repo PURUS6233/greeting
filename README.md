@@ -1,4 +1,4 @@
-https://travis-ci.org/PURUS6233/greeting.svg?branch=master
+[![Build Status](https://travis-ci.org/PURUS6233/greeting.svg?branch=master)](https://travis-ci.org/PURUS6233/greeting)
 
 Приложение выводит на экран приветственное сообщение, в зависимости от текущего времени суток.
 
