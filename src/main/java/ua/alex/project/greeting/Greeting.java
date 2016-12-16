@@ -9,7 +9,7 @@ public class Greeting {
 	
 	private static Logger log = LoggerFactory.getLogger(Greeting.class);
 	
-	public String greetingBasedOnHourFinder(UserData data) throws Exception{
+	public String greetingFinder(UserData data) throws Exception{
 		log.trace("Start finding griting based on User locale and time!");
 		Preconditions.checkState(data.validate(),
 				"Error occured during loading time and locale!");
@@ -31,7 +31,7 @@ public class Greeting {
 		UserData userData = new UserData();
 		log.trace("Create instance of Greeting object!");
 		Greeting greet = new Greeting();
-		System.out.println(greet.greetingBasedOnHourFinder(userData));
+		System.out.println(greet.greetingFinder(userData));
 	}
 
 }
