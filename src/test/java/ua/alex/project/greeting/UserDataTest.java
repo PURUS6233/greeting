@@ -6,37 +6,37 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import ua.alex.project.greeting.UserDate;
+import ua.alex.project.greeting.UserData;
 
-public class UserDateTest {
+public class UserDataTest {
 	
 	@Test
 	public void test_type() throws Exception {
-		assertNotNull(UserDate.class);
+		assertNotNull(UserData.class);
 	}
 	
 	@Test
 	public void test_instantiation() throws Exception {
-		UserDate data = new UserDate();
+		UserData data = new UserData();
 		assertNotNull(data);
 	}
 	
 	@Test
 	public void test_validate_true() throws Exception {
-		UserDate data = new UserDate();
+		UserData data = new UserData();
 		assertTrue(data.validate());
 	}
 	
 	@Test
 	public void test_validate_false_hour() throws Exception {
-		UserDate data = new UserDate();
+		UserData data = new UserData();
 		data.setHour(24);
 		assertFalse(data.validate());
 	}
 	
 	@Test
 	public void test_validate_false_locale() throws Exception {
-		UserDate data = new UserDate();
+		UserData data = new UserData();
 		data.setLocale(null);
 		assertFalse(data.validate());
 	}

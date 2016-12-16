@@ -3,12 +3,12 @@ package ua.alex.project.greeting;
 import java.time.LocalDateTime;
 import java.util.Locale;
 
-public class UserDate {
+public class UserData {
 	
 	private Locale locale;
 	private int hour;
 	
-	public UserDate(){
+	public UserData(){
 		this.locale = Locale.getDefault();
 		this.hour = LocalDateTime.now().getHour();
 	}
