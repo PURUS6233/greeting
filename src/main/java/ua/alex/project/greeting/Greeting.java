@@ -8,13 +8,13 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import com.google.common.base.Preconditions;
 
 public class Greeting {
-	
+
 	private final ApplicationContext context = new ClassPathXmlApplicationContext(
 			"locale.xml");
-	
+
 	private static Logger log = LoggerFactory.getLogger(Greeting.class);
-	
-	public String greetingFinder(UserData data) throws Exception{
+
+	public String greetingFinder(UserData data) {
 		log.trace("Start finding griting based on User locale and time!");
 		Preconditions.checkState(data.validate(),
 				"Error occured during loading time and locale!");
@@ -24,8 +24,7 @@ public class Greeting {
 					data.getLocale());
 		} else if (data.getHour() > 8 & data.getHour() < 19) {
 			log.info("Loading message for day greeting!");
-			return context.getMessage("greeting.day", null,
-					data.getLocale());
+			return context.getMessage("greeting.day", null, data.getLocale());
 		} else if (data.getHour() > 18 & data.getHour() < 23) {
 			log.info("Loading message for evening greeting!");
 			return context.getMessage("greeting.evening", null,
@@ -34,8 +33,8 @@ public class Greeting {
 		log.info("Loading message for night greeting!");
 		return context.getMessage("greeting.night", null, data.getLocale());
 	}
-	
-	public static void main(String[] args) throws Exception{
+
+	public static void main(String[] args) {
 		UserData userData = new UserData();
 		log.trace("Create instance of Greeting object!");
 		Greeting greet = new Greeting();
