@@ -36,6 +36,20 @@ public class GreetingTest {
 		assertEquals(greeting.greetingFinder(data), "Good night, World!");
 	}
 	
+	@Test
+	public void greetingFinder_day_ru() throws Exception {
+		data.setLocale(Locale.ROOT);
+		data.setHour(10);
+		assertEquals(greeting.greetingFinder(data), "Добрый день, Мир!");
+	}
+	
+	@Test
+	public void greetingFinder_evening_ru() throws Exception {
+		data.setLocale(Locale.ROOT);
+		data.setHour(19);
+		assertEquals(greeting.greetingFinder(data), "Добрый вечер, Мир!");
+	}
+	
 	@Test (expected=IllegalStateException.class)
 	public void greetingFinder_error_locale() throws Exception {
 		data.setLocale(null);
