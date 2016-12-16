@@ -36,16 +36,18 @@ public class GreetingTest {
 		assertEquals(greeting.greetingFinder(data), "Good night, World!");
 	}
 	
+	private static final Locale dLocale = new Locale.Builder().setLanguage("ru").setScript("Cyrl").build();
+	
 	@Test
 	public void greetingFinder_day_ru() throws Exception {
-		data.setLocale(Locale.ROOT);
+		data.setLocale(dLocale);
 		data.setHour(10);
 		assertEquals(greeting.greetingFinder(data), "Добрый день, Мир!");
 	}
 	
 	@Test
 	public void greetingFinder_evening_ru() throws Exception {
-		data.setLocale(Locale.ROOT);
+		data.setLocale(dLocale);
 		data.setHour(19);
 		assertEquals(greeting.greetingFinder(data), "Добрый вечер, Мир!");
 	}
