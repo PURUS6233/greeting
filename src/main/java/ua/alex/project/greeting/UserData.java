@@ -25,7 +25,7 @@ public class UserData {
 		log.trace("Start validating UserData object.");
 		Preconditions.checkState(!(locale == null),
 				"The locale can not be null!");
-		Preconditions.checkState(!(hour > 23 || hour < 0),
+		Preconditions.checkState(!(hour > 23 | hour < 0),
 				"The customer hour must be in range from 0 to 23 hours!");
 		log.trace("UserData object validated.");
 		return true;
